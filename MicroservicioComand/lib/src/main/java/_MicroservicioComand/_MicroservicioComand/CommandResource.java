@@ -1,23 +1,18 @@
-/*
- * Copyright 2015 - 2022 Anton Tananaev (anton@traccar.org)
- * Copyright 2016 Gabor Somogyi (gabor.g.somogyi@gmail.com)
- * Copyright 2017 Andrey Kunitsyn (andrey@traccar.org)
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-package org.traccar.api.resource;
 
-import org.slf4j.Logger;
+package _MicroservicioComand;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.locks.Condition;
+import java.util.stream.Collectors;
+
+import javax.swing.GroupLayout.Group;
+import javax.swing.text.Position;
+
 import org.slf4j.LoggerFactory;
 import org.traccar.BaseProtocol;
 import org.traccar.ServerManager;
@@ -27,15 +22,12 @@ import org.traccar.helper.LogAction;
 import org.traccar.helper.model.DeviceUtil;
 import org.traccar.model.Command;
 import org.traccar.model.Device;
-import org.traccar.model.Group;
-import org.traccar.model.Position;
 import org.traccar.model.QueuedCommand;
 import org.traccar.model.Typed;
 import org.traccar.model.User;
 import org.traccar.model.UserRestrictions;
 import org.traccar.storage.StorageException;
 import org.traccar.storage.query.Columns;
-import org.traccar.storage.query.Condition;
 import org.traccar.storage.query.Request;
 
 import jakarta.inject.Inject;
@@ -47,13 +39,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Path("commands")
 @Produces(MediaType.APPLICATION_JSON)
